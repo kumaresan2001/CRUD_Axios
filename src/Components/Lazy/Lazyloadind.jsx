@@ -67,8 +67,8 @@ function Lazyloadind() {
     <div ref={containerRef} style={{ height: "550px", overflowY: "auto" }}>
       <h1>Lazy Loading</h1>
       <ul>
-        {posts.map((post) => (
-          <LazyLoad key={post.id} height={100}>
+        {posts.map((post, index) => (
+          <LazyLoad key={index} height={100}>
             <div>
               <h3>id:{post.id}</h3>
               <h2>{post.title}</h2>
