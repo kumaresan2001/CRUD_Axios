@@ -20,6 +20,9 @@ function App() {
           <Button color="inherit" onClick={() => navigate("/")}>
             Home
           </Button>
+          <Button color="inherit" onClick={() => navigate("/posts")}>
+            Posts
+          </Button>
           <Button color="inherit" onClick={() => navigate("/forms")}>
             Forms
           </Button>
@@ -30,8 +33,8 @@ function App() {
       </AppBar>
       <Suspense fallback={<h2>Loading...</h2>}>
         <Routes>
-          <Route path="/" element={<Posts />} />
-
+          <Route path="/" element={<Welcome />} />
+          <Route path="/posts" element={<Posts />} />
           <Route path="/forms" element={<Forms />} />
           <Route path="/lazy" element={<Lazyloadind />} />
         </Routes>
@@ -41,3 +44,4 @@ function App() {
 }
 
 export default App;
+const Welcome = () => <h1>Welcome My APP ⭐🎉✨🎊🎆</h1>;
